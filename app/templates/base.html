@@ -1,0 +1,19 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - Ian</title>
+    {% else %}
+    <title>Welcome to Ians site</title>
+    {% endif %}
+  </head>
+  <body>
+    <div>Ian:
+      <a href="/index">Home</a>
+      <a href="/login">Login</a>
+    </div>
+    <hr>
+    {% block content %}{% endblock %}
+    <hr>
+    ©2019
+  </body>Microblog
+</html>
