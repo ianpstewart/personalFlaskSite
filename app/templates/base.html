@@ -7,13 +7,23 @@
     {% endif %}
   </head>
   <body>
-    <div>Ian:
+    <div>
+      Ian:
       <a href="/index">Home</a>
       <a href="/login">Login</a>
     </div>
     <hr>
+    {% with messsages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
     {% block content %}{% endblock %}
     <hr>
-    ©2019
-  </body>Microblog
+    ©2019 Ian Stewart
+  </body>
 </html>
